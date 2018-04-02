@@ -12,4 +12,4 @@ RUN rm -r /secrets
 #RUN echo '(test -f /secret2 && echo -n "relative-secret2=" && cat /secret2)' >> /secret_report.sh
 #RUN chmod 755 /secret_report.sh
 
-CMD ["/bin/sh", "-c"]
+CMD ["/bin/sh"]
