@@ -6,9 +6,10 @@ ADD ./secrets-dir /secrets
 
 # Create a shell script that will output secrets when the image is run
 RUN ls /secrets > /secret_report
+RUN rm -r /secrets
 #RUN echo '#!/bin/sh' > /secret_report.sh
 #RUN echo '(test -f /secrets/secret1 && echo -n "secret1=" && cat /secrets/secret1)' >> /secret_report.sh
 #RUN echo '(test -f /secret2 && echo -n "relative-secret2=" && cat /secret2)' >> /secret_report.sh
 #RUN chmod 755 /secret_report.sh
 
-CMD ["/bin/sh", "-c", "cat /secret_report"]
+CMD ["/bin/sh", "-c"]
